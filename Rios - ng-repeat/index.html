@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" ng-app="riosApp" ng-controller="riosCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rios ng-repeat</title>
+</head>
+<body>
+    <h1>Listado de ríos</h1>
+    <br>
+    <ul>
+        <li ng-repeat="rio in rios | orderBy: 'nombre'">{{rio.nombre}}</li>
+    </ul>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
