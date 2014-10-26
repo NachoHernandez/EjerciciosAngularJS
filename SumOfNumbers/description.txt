@@ -1,0 +1,1 @@
+Un sencillo ejemplo en el que solicitamos dos números y mostramos la suma de ambos.

@@ -1,0 +1,3 @@
+Ejemplo de suma de dos números introducidos por pantalla, en el que para conseguir el resultado de la suma debemos pulsar un boton que llama al evento ng-click, el cual llama a la función sumar pasandole como parametros los dos números. 
+También tenemos otro boton para resetear los valores tanto de los campos de formulario como del resultado de la suma.
+Todo esto lo conseguimos desde un controlador que nos procesa la lógica y nos devuelve datos a la vista.
