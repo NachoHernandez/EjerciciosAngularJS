@@ -7,5 +7,13 @@ riosApp.controller('riosCtrl',['$scope', function($scope)
     {nombre: "Duero"},
     {nombre: "Guadalquivir"},
     {nombre: "Segura"}]
+    
+    $scope.grabar = function(nuevo){
+       $scope.rios.push({nombre: nuevo});    
+       $scope.nuevo = "";                        
+                               }
 }
+
+
+                               
 ])

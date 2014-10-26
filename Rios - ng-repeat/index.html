@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Rios ng-repeat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <div class="container">
+  
     <h1>Listado de ríos</h1>
     <br>
-    <ul>
-        <li ng-repeat="rio in rios | orderBy: 'nombre'">{{rio.nombre}}</li>
+    Filtrar por: <input type="text" ng-model="filtrado">
+    <br>
+    <br>
+    <ul class="list-group">
+        <li ng-repeat="rio in rios | orderBy: 'nombre' | filter: filtrado" class="list-group-item">{{rio.nombre}}</li>
     </ul>
+    
+   
+    <br><br>
+    <form action="" ng-class="hide" ng-model="form">
+        <label>Inserta un nuevo río:  </label><input type="text" ng-model="nuevo" required name="campo" ng-minlength="1">
+        <span ng-show="form.campo.$error.required">Por favor introduce algo</span>
+        <br>
+        <input type="button" value="Grabar" ng-click="grabar(nuevo)" class="btn btn-primary">
+    </form>
+    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
     <script src="app.js"></script>
